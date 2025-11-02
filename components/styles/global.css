@@ -1,0 +1,41 @@
+:root {
+  --cor-primaria: #0077cc;
+  --cor-secundaria: #28a745;
+  --cor-fundo: #ffffff;
+  --cor-texto: #222;
+  --cor-destaque: #FFD700;
+
+        /* tons suaves e acessíveis */ 
+    --cor-azul-primario: #005fa3;
+    --cor-verde-sucesso: #3ce775;
+    --cor-vermelho-alerta: #e74c3c;
+    --Amarelo-destaque: #ffd700;
+
+  --fonte-principal: 'Arial', sans-serif;
+  --tamanho-fonte-base: 16px;
+  --espacamento: 1rem;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espacamento);
+  padding: var(--espacamento);
+}
+
+.cartao {
+  transition: transform 0.3s ease;
+}
+.cartao:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
