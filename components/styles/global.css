@@ -1,41 +1,328 @@
 :root {
-  --cor-primaria: #0077cc;
-  --cor-secundaria: #28a745;
-  --cor-fundo: #ffffff;
-  --cor-texto: #222;
-  --cor-destaque: #FFD700;
+    --cor-primaria: #0077cc;
+    --cor-secundaria: #28a745;
+    --cor-fundo: #ffffff;
+    --cor-texto: #222;
+    --cor-destaque: #FFD700;
 
-        /* tons suaves e acessíveis */ 
+    /* tons suaves e acessíveis */ 
     --cor-azul-primario: #005fa3;
     --cor-verde-sucesso: #3ce775;
     --cor-vermelho-alerta: #e74c3c;
     --Amarelo-destaque: #ffd700;
 
-  --fonte-principal: 'Arial', sans-serif;
-  --tamanho-fonte-base: 16px;
-  --espacamento: 1rem;
+        /* neutras */
+    --cor-neutra0:  #000000;
+    --cor-neutra1:  #1A1A1A;
+    --cor-neutra2:  #333333;
+    --cor-neutra3:  #4D4D4D;
+    --cor-neutra4:  #666666;
+    --cor-neutra5:  #808080;
+    --cor-neutra6:  #999999;
+    --cor-neutra7:  #B3B3B3;
+    --cor-neutra8:  #CCCCCC;
+    --cor-neutra9:  #E6E6E6;
+    --cor-neutra10: #FFFFFF;
+        
+    /* espaçamento */
+    --espacamento1: 8px;
+    --espacamento2: 16px;
+    --espacamento3: 24px;
+    --espacamento4: 32px;
+    --espacamento5: 48px;
+    --espacamento6: 64px;
+        
+    /*  tipografia   */
+    --tamanho-fonte-h6: 11pt;
+    --tamanho-fonte-h5: 14pt;
+    --tamanho-fonte-h4: 19pt;
+    --tamanho-fonte-p:  19pt;
+    --tamanho-fonte-h3: 24pt;
+    --tamanho-fonte-h2: 30pt;
+    --tamanho-fonte-h1: 37pt;
+
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-fonte-base: 16px;
 }
 
+  /* Ajuste preliminar */
+body { 
+  margin: 0; 
+  padding: 0; 
+  background-color: var(--cor-fundo);
+}
+
+  /* Ajuste do layout da página*/
+.layout-principal {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  align-items: center;    
+  width: 100%;
+  max-width: 1280px;
+  justify-self: center;
+  align-items: center;
+}
+
+  /* Container principal */
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--espacamento);
-  padding: var(--espacamento);
+  gap: var(--espacamento2);
+  padding: var(--espacamento2);
+}
+
+  /* Cabeçalho */ 
+.header {
+  grid-area: header;
+  background-color: var(--cor-fundo);
+  height: 75px;
+  padding: 0 25px;
+}
+
+.header nav {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.header a {
+  transition: all 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+    transform: scale(1.05);
+}
+
+  /* Mobile - menu tipo toggle (expande/comprime) */
+#menu-toggle {
+  display: flex;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#menu-toggle:hover {
+  background-color: #e5e5e5;  
+}
+
+.texto {
+  display: flex;
+}
+
+.icone {
+  display: block;
+}
+
+#menu-itens {
+  display: none;
+  list-style: none; 
+  gap: 15px; 
+  padding: 0; 
+  margin-top: 10px;
+}
+
+#menu-itens a {  
+  text-decoration: none;
+  color: var(--cor-neutra1);
+}
+#menu-itens.aberto {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  gap: 0;
+  margin: 0;
+  z-index: 1;
+  align-items: center;
+}
+
+#menu-itens.aberto a {
+  display: flex;
+  padding: 8px 0 8px 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;    
+  background-color: var(--cor-neutra9);
+  border: 1px solid var(--cor-neutra8);
+  width: 150px;
+}
+
+#menu-itens.aberto a:hover {    
+  background-color: var(--cor-neutra8); 
+}
+
+  /* Menu principal */
+@media (min-width: 768px) {
+  #menu-itens {
+    display: flex;
+    font-size: var(--tamanho-fonte-h5);     
+  }
+
+  #menu-itens li {
+    transition: all 0.5s ease;
+  }
+  
+  #menu-itens li:hover {
+    transform: scale(1.05);
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .texto {
+    display: flex;
+  }
+
+  .icone {
+    display: none;
+  }
+}
+
+  /* Rodapé*/
+.footer {
+  grid-area: footer;
+  background-color: var(--cor-fundo);
+  padding: var(--espacamento3);
+}
+
+.footer  a{ 
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    color: #121212;
+    text-decoration: none;
+    align-items: center;
+    transition: color 0.3s, transform 0.5s;
+}
+
+.footer a:hover {
+    color: hsl(180, 100%, 40%);
+    transform: scale(1.05);
+}
+
+#menu-rodape {
+  list-style: none; 
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  padding: 0; 
+  margin-top: 10px;
+}
+
+.separador-rodape {
+  text-align: center; 
+  margin-top: 10px;
+}
+
+/* Principal */
+.main {
+  grid-area: main;
+  padding: var(--espacamento3);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.article { 
+  text-align: center;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+/* bordas para contrastar imagems claras e o fundo */
+.article a > img {
+  border: 2px solid #CCC;  
+  width: 100%;
+  height: auto;
 }
 
 .cartao {
-  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid var(--cor-neutra8);
+  padding: 15px; 
+  border-radius: 8px;
+  transition: transform 0.3s ease;    
 }
+
 .cartao:hover {
   transform: scale(1.02);
 }
 
-@keyframes fadeIn {
+
+.botao {
+  display: inline-block; 
+  padding: 8px 16px; 
+  background-color: var(--cor-neutra4); 
+  color: var(--cor-neutra10); 
+  text-decoration: none; 
+  border-radius: 5px;
+}
+
+/* Botões */
+.botao {
+  display: inline-block; 
+  padding: 10px 20px;
+  text-decoration: none; 
+  border-radius: 5px;
+  /* cor padrão */
+  background-color: hsl(205, 100%, 40%); 
+  box-shadow: 1px 2px 1px 0px var(--cor-neutra1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Efeito Visual - Botão */
+.botao:hover {
+    transform: scale(0.98);
+    background-color: hsl(180, 100%, 40%);
+}
+
+/* Personalizar cor de botão */
+.btn-cor0 {
+  /* igual ao padrão */
+  background-color: #0077cc; 
+  color: white;
+}
+
+.btn-cor1 {
+  background-color: #28a745; 
+  color: white; 
+}
+
+.btn-cor2 {
+  background-color: #ffc107; 
+  color: black; 
+}
+
+.btn-cor3 {
+  background-color: #17a2b8;  
+  color: white; 
+}
+
+.btn-cor4 {
+  background-color: #6c757d; 
+  color: white;
+}
+
+@keyframes efeito-surgir {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .section {
-  animation: fadeIn 0.8s ease-in-out;
+  animation: efeito-surgir 0.8s ease-in-out;
 }
 
