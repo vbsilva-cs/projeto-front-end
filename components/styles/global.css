@@ -191,18 +191,18 @@ body {
 }
 
 .footer  a{ 
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px;
-    color: #121212;
-    text-decoration: none;
-    align-items: center;
-    transition: color 0.3s, transform 0.5s;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  color: #121212;
+  text-decoration: none;
+  align-items: center;
+  transition: color 0.3s, transform 0.5s;
 }
 
 .footer a:hover {
-    color: hsl(180, 100%, 40%);
-    transform: scale(1.05);
+  color: hsl(180, 100%, 40%);
+  transform: scale(1.05);
 }
 
 #menu-rodape {
@@ -239,6 +239,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
   justify-content: center;
+  width: 100%;
 }
 
 /* bordas para contrastar imagems claras e o fundo */
@@ -315,6 +316,14 @@ body {
 .btn-cor4 {
   background-color: #6c757d; 
   color: white;
+}
+
+.separador-svg {  
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  margin-top: 80px;
 }
 
 @keyframes efeito-surgir {
