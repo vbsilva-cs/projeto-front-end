@@ -51,7 +51,8 @@
                     <legend><strong>Dados Pessoais</strong></legend>
                     <label for="nome">Nome completo:</label><br>
                     <input class="input-long" type="text" id="nome" name="nome" size="60" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Digite seu nome completo"><br><br>
-                   
+                    <div id="nome-status"></div>
+
                     <label for="cpf">CPF:</label><br>
                     <input class="input-medium" type="text" id="cpf" name="cpf" size="11" maxlength="11" pattern="\d{11}" required placeholder="Somente números"><br><br>
 
@@ -77,6 +78,7 @@
                     <legend><strong>Local de Residência</strong></legend>
                     <label for="endereco">Endereço:</label><br>
                     <input class="input-long" type="text" id="endereco" name="endereco" size="60" required placeholder="Ex: Rua exemplo, nº 1234"><br><br>
+                    <div id="endereco-status"></div>
 
                     <label for="complemento">Complemento (opcional):</label><br>
                     <input class="input-long" type="text" id="complemento" name="complemento" size="60" placeholder="Ex: Bloco, apartamento, ao lado de..."><br><br>
@@ -86,6 +88,7 @@
 
                     <label for="cidade">Cidade:</label><br>
                     <input class="input-medium" type="text" id="cidade" name="cidade" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Digite o nome de sua cidade"><br><br>
+                    <div id="cidade-status"></div>
 
                     <label for="uf">UF:</label><br>
                     <select id="uf" name="uf" required>
@@ -105,6 +108,7 @@
                 <div style="margin-top: 20px;">
                     <button class="botao btn-cor1" type="submit" value="Enviar" style="border: none;">Enviar</button>
                     <button class="botao" type="reset" value="Limpar" style="border: none">Limpar</button>
+                    <div id="confirmacao"></div>
                 </div>
             </form>
         </section>
