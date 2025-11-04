@@ -1,5 +1,4 @@
-# Nome do Projeto
-Animal Shelter Website
+# Animal Shelter Website
 
 ## Descrição
 Projeto de desenvolvimento de uma plataforma web, que simula uma ONG fictícia de abrigo para animais.
