@@ -1,4 +1,4 @@
-# Animal Shelter Website Project v1.0
+# Animal Shelter Website Project v2.0
 
 ## nome do repositório: projeto-front-end
 Aplicação prática de conceitos fundamentais de desenvolvimentos em um contexto realista e socialmente relevante.
