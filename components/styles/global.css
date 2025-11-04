@@ -417,6 +417,13 @@ body {
   padding: 8px 0;
 }
 
+@media only screen and (min-width: 780px) {
+  .foto_galeria {
+    width: calc(50% - 10px);
+    max-width: 320px;
+  }
+} /* Fim Galeria */
+
 /* Layout e estilo do formulário*/
 
 .formulario-conteudo {
@@ -476,19 +483,20 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
-#msg-status p {
+.status-erro {
   margin: -10px 0 0 5px;
   padding: 0;
   font-size: 14px;
   color: red;  
 }
 
-@media only screen and (min-width: 780px) {
-  .foto_galeria {
-    width: calc(50% - 10px);
-    max-width: 320px;
-  }
-} /* Fim Galeria */
+.status-sucesso {
+  margin: -10px 0 0 5px;
+  padding: 0;
+  font-size: 14px;
+  color: green;
+} /* Fim formulário */
+
 
 @keyframes efeito-surgir {
   from { opacity: 0; transform: translateY(20px); }
