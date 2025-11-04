@@ -417,6 +417,8 @@ body {
   padding: 8px 0;
 }
 
+/* Layout e estilo do formulário*/
+
 .formulario-conteudo {
   border: 1px solid; 
   padding: 20px 35px 20px 45px; 
@@ -430,7 +432,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Campos de entrada */
 input, select { 
   padding: 0.5rem;
   border: 1px solid #e0e0e0;
@@ -438,19 +439,21 @@ input, select {
   outline: none;
 }
 
-#input-long {
+.input-long {
   width: 95%;
 }
 
-#input-medium {
+.input-medium {
   width: 50%;
 }
 
 @media (min-width: 768px) {  
-  #input-medium {
+  .input-medium {
     width: 25%;
   }
 }
+
+/* Validação de formulário */
 
 input:valid:not(:placeholder-shown) {
   border: 2px solid #3ce775;
@@ -471,6 +474,13 @@ input:focus:invalid {
 input:focus {
   border: 2px solid #3498db;
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+#msg-status p {
+  margin: -10px 0 0 5px;
+  padding: 0;
+  font-size: 14px;
+  color: red;  
 }
 
 @media only screen and (min-width: 780px) {
