@@ -4,27 +4,36 @@
     <title>Contribua com a Causa - Animal Shelter</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff;">
+<body class="layout-principal">
     <!-- Cabeçalho -->
-    <header style="background-color: #f5f5f5; padding: 10px;">
-        <nav role="navigation" aria-label="Menu principal">
-            <a href="../../public/index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
-            <ul style="list-style: none; display: flex; gap: 15px; padding: 0; margin-top: 10px;">
-                <li><a href="../../public/index.html">Inicio</a></li>			
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="apoio.html" style="font-weight: bold;">Contribuir</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="contato.html">Contato</a></li>
+    <header class="header">
+        <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
+            <a href="../../index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
+            <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+            <ul id="menu-itens">
+                <li><a href="../../public/index.html"><span class="icone">🏠</span><span class="texto">Inicio</a></li>			
+                <li><a href="projetos.html"><span class="icone">📁</span><span class="texto">Projetos</a></li>
+                <li><a href="noticias.html"><span class="icone">📁</span><span class="texto">Notícias</a></li>
+                <li><a href="apoio.html" style="font-weight: bold;"><span class="icone">📁</span><span class="texto">Contribuir</a></li>
+                <li class="menu-sub-itens">
+                    <a href="cadastro.html"><span class="icone">📁</span><span class="texto">Cadastro</a>
+                    <ul class="sub-itens" area-expanded>
+                        <li><a href="trabalhe_conosco.html">Voluntariado</a></li>
+                        <li><a href="cadastro.html">Inscrição</a></li>                    
+                    </ul>
+                </li>    
+                </li>
+                <li><a href="contato.html"><span class="icone">📁</span><span class="texto">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Conteúdo Principal -->
-    <main style="padding: 20px;">
-        <section style="margin-bottom: 40px;">
+    <main class="main container-grid">
+        <section  class="section cartao" style="margin-bottom: 0;">
             <h2>Apoiando a Causa</h2>
             <p>Existem diversas formas de contribuir com causas sociais e fortalecer instituições como a Animal Shelter:</p>
             <ul>
@@ -32,10 +41,10 @@
                 <li>Participar como voluntário em ações promovidas pela instituição.</li>
                 <li>Compartilhar informações para mobilizar ações coletivas.</li>
                 <li>Realizar doações de recursos materiais ou financeiros.</li>
-            </ul>
+            </ul>     
         </section>
 
-        <section style="margin-bottom: 40px;">
+        <section  class="section cartao" style="margin-bottom: 0;">
             <h3>Como a doação de recursos ajuda?</h3>
             <p>Com mais recursos disponíveis, podemos:</p>
             <ul>
@@ -46,7 +55,7 @@
             </ul>
         </section>
 
-        <section style="margin-bottom: 40px;">
+        <section  class="section cartao" style="margin-bottom: 0;">
             <h3>Tipos de recursos aceitos</h3>
             <ul>
                 <li>Infraestrutura: móveis, equipamentos.</li>
@@ -57,8 +66,8 @@
                 <li>Financeiro: ajuda para despesas operacionais.</li>
             </ul>
         </section>
-
-        <section style="margin-bottom: 40px;">
+        
+        <section  class="section cartao" style="margin-bottom: 0;">
             <h3>Uso dos recursos</h3>
             <ul>
                 <li>Aquisição de equipamentos essenciais.</li>
@@ -68,57 +77,69 @@
                 <li>Transparência e reserva de fundos específicos.</li>
             </ul>
         </section>
+        
+        <svg class="separador-svg" viewBox="0 0 500 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="margin-bottom: 20px;">
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">🐾 🐾 🐾 🐾 🐾🐾 🐾 🐾 🐾 🐾</text>
+        </svg>
 
-        <section style="margin-bottom: 40px;">
-            <h3>Processo de doação</h3>
-            <ol>
-                <li>Compareça à instituição. Veja detalhes na página de <a href="contato.html">Contato</a>.</li>
-                <li>Preencha a documentação com informações sobre o tipo, quantidade e finalidade da doação.</li>
-                <li>Especifique o propósito da contribuição.</li>
-                <li>O registro será feito no sistema e encaminhado às equipes responsáveis.</li>
-            </ol>
-            <a href="contato.html" style="display: inline-block; padding: 10px 20px; background-color: #0077cc; color: white; text-decoration: none; border-radius: 5px;">Contate-nos</a>
-        </section>
+        <section class="container-flex">
+            <article  class="section cartao">
+                <h3>Processo de doação</h3>
+                <ol>
+                    <li>Compareça à instituição. Veja detalhes na página de <a href="contato.html">Contato</a>.</li>
+                    <li>Preencha a documentação com informações sobre o tipo, quantidade e finalidade da doação.</li>
+                    <li>Especifique o propósito da contribuição.</li>
+                    <li>O registro será feito no sistema e encaminhado às equipes responsáveis.</li>
+                </ol>
+                <a class="botao btn-cor3" href="contato.html">Contate-nos</a>
+            </article>
 
-        <section>
-            <h3>Transferência Bancária</h3>
-            <ol>
-                <li>Clique no botão abaixo para acessar a página de transferências.</li>
-                <li>Preencha os dados solicitados e confirme a operação.</li>
-                <li>Você receberá um e-mail de confirmação.</li>
-                <li>Em caso de dúvidas, consulte nossas políticas.</li>
-            </ol>
-            <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">Doar agora</a>
+            <article class="section cartao">
+                <h3>Transferência Bancária</h3>
+                <ol>
+                    <li>Clique no botão abaixo para acessar a página de transferências.</li>
+                    <li>Preencha os dados solicitados e confirme a operação.</li>
+                    <li>Você receberá um e-mail de confirmação.</li>
+                    <li>Em caso de dúvidas, consulte nossas políticas.</li>
+                </ol>
+                <a class="botao btn-cor1" href="#">Doar agora</a>
+            </article>
         </section>
+        
+        <svg class="separador-svg" viewBox="0 0 500 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="margin-top: 0;">
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">🐾 🐾 🐾 🐾 🐾🐾 🐾 🐾 🐾 🐾</text>
+        </svg>
     </main>
 
     <!-- Rodapé -->
-    <footer style="background-color: #f5f5f5; padding: 20px;">
-        <div style="display: flex; flex-wrap: wrap; gap: 30px;">
-            <div>
-                <h3>Social</h3>
-                <a href="contato.html"><img src="../assets/icons/logo-whatsapp-0001-128.png" alt="WhatsApp" width="30"> WhatsApp</a><br>
-                <a href="contato.html"><img src="../assets/icons/logo-facebook-0003-128.png" alt="Facebook" width="30"> Facebook</a><br>
-                <a href="contato.html"><img src="../assets/icons/logo-instagram-0002-128.png" alt="Instagram" width="30"> Instagram</a>
+    <footer class="footer">
+        <section style="justify-self: center; width: 100%;">
+            <div class="container-flex" style="gap: 30px; align-items:center; justify-content: space-between;">
+                <article>
+                    <h3>Social</h3>
+                    <a href="contato.html"><img src="../assets/icons/logo-whatsapp-0001-128.png" alt="WhatsApp" width="30" height="30"> WhatsApp</a><br>
+                    <a href="contato.html"><img src="../assets/icons/logo-facebook-0003-128.png" alt="Facebook" width="30" height="30"> Facebook</a><br>
+                    <a href="contato.html"><img src="../assets/icons/logo-instagram-0002-128.png" alt="Instagram" width="30" height="30"> Instagram</a>
+                </article>
+                <article>
+                    <a href="../../public/index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
+                </article>
+                <article>
+                    <h3>Endereço</h3>
+                    <p>Estrada Fictícia, 9999, Bairro Imaginário</p>
+                    <p>Cidade - UF - CEP: 00000-000</p>
+                    <p>E-mail: atendimento@animal.shelter.com</p>
+                </article>
+                <article>
+                    <h3>Atendimento</h3>
+                    <p>Celular: (99) 98765-4321</p>
+                    <p>Telefone fixo: (99) 1234-5678</p>
+                </article>
             </div>
-            <div>
-                <a href="../../public/index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
-            </div>
-            <div>
-                <h3>Endereço</h3>
-                <p>Estrada Fictícia, 9999, Bairro Imaginário</p>
-                <p>Cidade - UF - CEP: 00000-000</p>
-                <p>E-mail: atendimento@animal.shelter.com</p>
-            </div>
-            <div>
-                <h3>Atendimento</h3>
-                <p>Celular: (99) 98765-4321</p>
-                <p>Telefone fixo: (99) 1234-5678</p>
-            </div>
-        </div>
+        </section>
         <hr>
         <nav>
-            <ul style="list-style: none; display: flex; gap: 15px; padding: 0;">
+            <ul id="menu-rodape">
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Licença</a></li>
                 <li><a href="#">Política de Privacidade</a></li>
@@ -127,7 +148,8 @@
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-        <p style="text-align: center; margin-top: 10px;">Copyright © 2025 - Animal Shelter</p>
+        <p class="separador-rodape">Copyright © 2025 - Animal Shelter</p>
     </footer>
+    <script src="../scripts/script.js" defer></script>
 </body>
 </html>
