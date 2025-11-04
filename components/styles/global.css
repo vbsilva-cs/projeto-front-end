@@ -424,6 +424,10 @@ body {
   }
 } /* Fim Galeria */
 
+iframe, #mensagem {
+  width: 100%;
+}
+
 /* Layout e estilo do formulário*/
 
 .formulario-conteudo {
@@ -458,7 +462,7 @@ input, select {
   .input-medium {
     width: 25%;
   }
-}
+}/* Fim layout e estilo do formulário*/
 
 /* Validação de formulário */
 
@@ -495,7 +499,15 @@ input:focus {
   padding: 0;
   font-size: 14px;
   color: green;
-} /* Fim formulário */
+} /* Fim validação de formulário */
+
+#comentarios {
+  background-color: var(--cor-fundo-nv0);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10%; 
+  margin-bottom: 15px;
+}
 
 
 @keyframes efeito-surgir {
@@ -507,3 +519,6 @@ input:focus {
   animation: efeito-surgir 0.8s ease-in-out;
 }
 
+.separador-svg {  
+  animation: efeito-surgir 2s ease-in-out;
+}
