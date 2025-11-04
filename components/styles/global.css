@@ -204,19 +204,24 @@ body {
   }
 
       /* Submenus, normalmente ocultos */  
+  .menu-sub-itens {
+    align-self: center;
+    display: block;
+  }
+
   .menu-sub-itens:hover {
     border: 1px solid var(--cor-neutra9);
   }
 
   .menu-sub-itens:hover > .sub-itens {
     display: block;
+    margin-top: 10px;
+    margin-left: -45px;
   }
 
   .sub-itens {
     list-style: none;
     position: absolute;
-    top: 90px;
-    right: 85px;
     padding: 0;
     margin: 0;
   }
@@ -412,6 +417,15 @@ body {
   padding: 8px 0;
 }
 
+@media only screen and (min-width: 780px) {
+  .foto_galeria {
+    width: calc(50% - 10px);
+    max-width: 320px;
+  }
+} /* Fim Galeria */
+
+/* Layout e estilo do formulário*/
+
 .formulario-conteudo {
   border: 1px solid; 
   padding: 20px 35px 20px 45px; 
@@ -425,7 +439,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Campos de entrada */
 input, select { 
   padding: 0.5rem;
   border: 1px solid #e0e0e0;
@@ -433,19 +446,21 @@ input, select {
   outline: none;
 }
 
-#input-long {
+.input-long {
   width: 95%;
 }
 
-#input-medium {
+.input-medium {
   width: 50%;
 }
 
 @media (min-width: 768px) {  
-  #input-medium {
+  .input-medium {
     width: 25%;
   }
 }
+
+/* Validação de formulário */
 
 input:valid:not(:placeholder-shown) {
   border: 2px solid #3ce775;
@@ -468,12 +483,20 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
-@media only screen and (min-width: 780px) {
-  .foto_galeria {
-    width: calc(50% - 10px);
-    max-width: 320px;
-  }
-} /* Fim Galeria */
+.status-erro {
+  margin: -10px 0 0 5px;
+  padding: 0;
+  font-size: 14px;
+  color: red;  
+}
+
+.status-sucesso {
+  margin: -10px 0 0 5px;
+  padding: 0;
+  font-size: 14px;
+  color: green;
+} /* Fim formulário */
+
 
 @keyframes efeito-surgir {
   from { opacity: 0; transform: translateY(20px); }
