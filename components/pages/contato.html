@@ -31,50 +31,22 @@
         </nav>
     </header>
 
-<body class="layout-principal">
-    <!-- Cabeçalho -->
-    <header class="header">
-        <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
-            <a href="../../index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
-            <button id="menu-toggle" aria-label="Abrir menu">☰</button>
-            <ul id="menu-itens">
-                <li><a href="../../public/index.html" style="font-weight: bold;"><span class="icone">🏠</span><span class="texto">Inicio</a></li>			
-                <li><a href="projetos.html"><span class="icone">📁</span><span class="texto">Projetos</a></li>
-                <li><a href="noticias.html"><span class="icone">📁</span><span class="texto">Notícias</a></li>
-                <li><a href="apoio.html"><span class="icone">📁</span><span class="texto">Contribuir</a></li>
-                <li class="menu-sub-itens">
-                    <a href="cadastro.html"><span class="icone">📁</span><span class="texto">Cadastro</a>
-                    <ul class="sub-itens" area-expanded>
-                        <li><a href="trabalhe_conosco.html">Voluntariado</a></li>
-                        <li><a href="cadastro.html">Inscrição</a></li>                    
-                    </ul>
-                </li>    
-                </li>
-                <li><a href="contato.html"><span class="icone">📁</span><span class="texto">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-                </li>
-                <li><a href="contato.html" style="font-weight: bold;"><span class="icone">📁</span><span class="texto">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <!-- Conteúdo Principal -->
     <main class="main container-grid">
         <!-- Mapa -->
         <section  class="section">
             <article class="cartao" style="margin-top: 20px;">
-            <h2>Mapa da Região</h2>
-            <article class="article">
-                <iframe src="../assets/images/mapa-localizacao-960.jpg" title="Mapa do Endereço" width="600" height="450" style="border: 1px solid #ccc;"></iframe>
-                <div style="margin-top: 20px;">
-                    <h3>Endereço</h3>
-                    <p>Estrada Fictícia, 9999, Bairro Imaginário</p>
-                    <p>Cidade - UF - CEP: 00000-000</p>
-                    <p>Telefone: (99) 93210-1234</p>
-                    <p>Telefone: (99) 3210-1234</p>
-                </div>
+                <h2>Mapa da Região</h2>
+                <article class="article" style="width: 100%;">
+                    <iframe src="../assets/images/mapa-localizacao-960.jpg" title="Mapa do Endereço" width="600" height="450" style="border: 1px solid #ccc;"></iframe>
+                    <div style="margin-top: 20px;">
+                        <h3>Endereço</h3>
+                        <p>Estrada Fictícia, 9999, Bairro Imaginário</p>
+                        <p>Cidade - UF - CEP: 00000-000</p>
+                        <p>Telefone: (99) 93210-1234</p>
+                        <p>Telefone: (99) 3210-1234</p>
+                    </div>
+                </article>
             </article>
         </section>
 
@@ -84,13 +56,23 @@
 
         <!-- Sugestões -->
         <section class="section">
-            <article class="cartao" style="margin-top: 20px;">
-            <h2>Sugestões e Críticas</h2>
-            <p style="font-size: var(--tamanho-fonte-h5);">Envie sua opinião, sugestão ou crítica. Sua participação é muito importante para nós!</p>
-                <form class="article">
-                    <textarea name="mensagem" rows="10" cols="75" placeholder="Escreva sua mensagem aqui..." style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+            <article class="cartao" style="margin-top: 20px; width: 100%;">
+                <h2>Sugestões e Críticas</h2>
+                <p>Envie sua opinião, sugestão ou crítica. Sua participação é muito importante para nós!</p>
+                <form class="article" style="width: 100%;">
+                    <label for="mensagem">Comentário</label>
+                    <textarea id= "mensagem" name="mensagem" rows="10" cols="70" placeholder="Escreva sua mensagem aqui..." style="max-width: 95%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                    <input class="botao btn-cor1" type="submit" value="Enviar" style="border: none;">
                 </form>
             </article>
+        </section>
+
+        <!-- Postagens -->
+        <section class="cartao">
+            <h3>Comentários</h3>
+            <div id="comentarios">
+                <p>Nenhum comentário.</p>
+            </div>
         </section>
     </main>
 
@@ -133,6 +115,6 @@
         </nav>
         <p class="separador-rodape">Copyright © 2025 - Animal Shelter</p>
     </footer>
-    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/0script.js" defer></script>
 </body>
 </html>
