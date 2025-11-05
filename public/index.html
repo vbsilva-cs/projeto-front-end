@@ -9,22 +9,22 @@
 
 <body class="layout-principal">
     <!-- Cabeçalho -->
-    <header class="header">        
+    <header class="header" role="banner">        
         <div id="painel-acessibilidade" aria-label="Painel de acessibilidade" role="region">
             <button onclick="alternarTema()" aria-label="Alternar entre modo claro e escuro">🌙 Tema</button>
             <button onclick="alternarContraste()" aria-label="Ativar alto contraste">🌓 Contraste</button>
             <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
             <button onclick="reduzirFonte()" aria-label="Reduzir fonte">A-</button>
         </div>
-        <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
+        <nav class="menu-navegacao" role="navigation" aria-label="Navegação principal">
             <a href="index.html"><img src="../components/assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
-            <button id="menu-toggle" aria-label="Abrir menu">☰</button>
-            <ul id="menu-itens">
+            <button id="menu-toggle" aria-label="Abrir menu" aria-controls="Abre menu principal verticalmente">☰</button>
+            <ul id="menu-itens" aria-label="Menu Principal horizontal" aria-expanded="Menu Principal vertical">
                 <li><a href="../public/index.html" style="font-weight: bold;"><span class="icone">🏠</span><span class="texto">Inicio</a></li>			
                 <li><a href="../components/pages/projetos.html"><span class="icone">📁</span><span class="texto">Projetos</a></li>
                 <li><a href="../components/pages/noticias.html"><span class="icone">📁</span><span class="texto">Notícias</a></li>
                 <li><a href="../components/pages/apoio.html"><span class="icone">📁</span><span class="texto">Contribuir</a></li>
-                <li class="menu-sub-itens">
+                <li class="menu-sub-itens" aria-expanded="Sub-menu">
                     <a href="../components/pages/cadastro.html"><span class="icone">📁</span><span class="texto">Cadastro</a>
                     <ul class="sub-itens" area-expanded>
                         <li><a href="../components/pages/trabalhe_conosco.html">Voluntariado</a></li>
@@ -38,13 +38,13 @@
     </header>
     
     <!-- Conteúdo Principal -->
-    <main class="main container-grid">
+    <main class="main container-grid" role="main">
         <!-- Seção Sobre -->
         <section class="section">
             <h2>Sobre</h2>
             <p>Animal Shelter é uma organização não governamental dedicada ao acolhimento de animais abandonados. Oferecemos um ambiente seguro e acolhedor para sua recuperação, com cuidados contínuos até que encontrem um lar definitivo.</p>
             <p>Antes de adquirir um animal, considere a adoção. É um gesto de amor que transforma vidas e oferece a chance de conhecer companheiros incríveis.</p>
-            <a class="botao btn-cor0" href="../components/pages/projetos.html">Ver detalhes</a> 
+            <a class="botao btn-cor0" href="../components/pages/projetos.html" aria-label="Botão de redirecionamento">Ver detalhes</a> 
         </section>
 
             <svg class="separador-svg" viewBox="0 0 500 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
@@ -59,17 +59,17 @@
                 <div class="cartao">
                     <h3>Adoção / Doação</h3>
                     <p>Para adotar ou doar um animal, entre em contato conosco. Estamos prontos para orientar você nesse processo.</p>
-                    <a class="botao btn-cor1" href="../components/pages/contato.html">Saiba mais</a>
+                    <a class="botao btn-cor1" href="../components/pages/contato.html" aria-label="Botão de redirecionamento">Saiba mais</a>
                 </div>
                 <div class="cartao">
                     <h3>Contribuir</h3>
                     <p>Ajude a fortalecer nossa missão! Sua doação faz a diferença na vida de muitos animais.</p>
-                    <a class="botao btn-cor2" href="../components/pages/apoio.html">Saiba mais</a>
+                    <a class="botao btn-cor2" href="../components/pages/apoio.html" aria-label="Botão de redirecionamento">Saiba mais</a>
                 </div>
                 <div class="cartao">
                     <h3>Trabalhe Conosco</h3>
                     <p>Quer fazer parte da nossa equipe? Clique abaixo e preencha sua ficha de interesse.</p>
-                    <a class="botao btn-cor3" href="../components/pages/trabalhe_conosco.html">Saiba mais</a>
+                    <a class="botao btn-cor3" href="../components/pages/trabalhe_conosco.html" aria-label="Botão de redirecionamento">Saiba mais</a>
                 </div>
             </div>  
         </section>
@@ -88,13 +88,13 @@
                     <img class="cartao" src="../components/assets/images/campaign-0001-1024.webp" alt="Imagem da campanha de vacinação" width="600" height="350" style="border: 1px solid #CCC; padding: 0; max-width: 800px;" loading="lazy">
                 </a>
                 <br><br>
-                <a class="botao btn-cor4" href="../components/pages/noticias.html">Ver todas</a>
+                <a class="botao btn-cor4" href="../components/pages/noticias.html" aria-label="Botão de redirecionamento">Ver todas</a>
             </article>
         </section>
     </main>
 
     <!-- Rodapé -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <section style="justify-self: center; width: 100%;">
             <div class="container-flex" style="gap: 30px; align-items:center; justify-content: space-between;">
                 <article>
@@ -121,7 +121,7 @@
         </section>
         <hr>
         <nav>
-            <ul id="menu-rodape">
+            <ul id="menu-rodape" aria-label="Menu do Rodapé">
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Licença</a></li>
                 <li><a href="#">Política de Privacidade</a></li>
