@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html  lang="pt-BR" data-tema="claro">
 <head>
     <title>Cadastro - Animal Shelter</title>
     <meta charset="UTF-8">
@@ -9,7 +9,13 @@
 
 <body class="layout-principal">
     <!-- Cabeçalho -->
-    <header class="header">
+    <header class="header">        
+        <div id="painel-acessibilidade" aria-label="Painel de acessibilidade" role="region">
+            <button onclick="alternarTema()" aria-label="Alternar entre modo claro e escuro">🌙 Tema</button>
+            <button onclick="alternarContraste()" aria-label="Ativar alto contraste">🌓 Contraste</button>
+            <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="reduzirFonte()" aria-label="Reduzir fonte">A-</button>
+        </div>
         <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
             <a href="../../public/index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
             <button id="menu-toggle" aria-label="Abrir menu">☰</button>
@@ -106,8 +112,8 @@
                 </fieldset>
 
                 <div style="margin-top: 20px;">
-                    <button class="botao btn-cor1" type="submit" value="Enviar" style="border: none;">Enviar</button>
-                    <button class="botao" type="reset" value="Limpar" style="border: none">Limpar</button>
+                    <button class="botao btn-cor1" type="submit" value="Enviar" style="border: none; color:white">Enviar</button>
+                    <button class="botao btn-cor4" type="reset" value="Limpar" style="border: none; color:white">Limpar</button>
                     <div id="confirmacao"></div>
                 </div>
             </form>
