@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (post.innerHTML.trim() == '<p>Nenhum comentário.</p>') {
                 post.innerHTML = '';
             }
-            post.innerHTML += '<div class="container-flex" style="flex-direction:row; gap: 30px; margin-bottom: 15px;"><img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy"><p>' + mensagem + '</p></div>';
+            post.innerHTML += `<div class="container-flex" style="flex-direction:row; gap: 30px; margin-bottom: 15px;"><img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy"><p>${mensagem}</p></div>`;
             alert('Postagem realizada com sucesso!');
             form.reset
             return;
