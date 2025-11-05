@@ -4,6 +4,7 @@
     <title>Cadastro - Animal Shelter</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../public/favicon-animal-shelter-32.ico">
     <link rel="stylesheet" href="../styles/global.css">
 </head>
 
@@ -26,7 +27,7 @@
                 <li><a href="apoio.html"><span class="icone">📁</span><span class="texto">Contribuir</a></li>
                 <li class="menu-sub-itens">
                     <a href="cadastro.html" style="font-weight: bold;"><span class="icone">📁</span><span class="texto">Cadastro</a>
-                    <ul class="sub-itens" area-expanded>
+                    <ul class="sub-itens" area-expanded style="margin-left: -61px;">
                         <li><a href="trabalhe_conosco.html">Voluntariado</a></li>
                         <li><a href="cadastro.html">Inscrição</a></li>                    
                     </ul>
@@ -39,7 +40,7 @@
 
     <!-- Conteúdo Principal -->
     <main class="main container-grid" role="main">
-        <section class="section formulario">
+        <section class="section formulario" role="region">
                 <h2>Cadastro</h2>
                 <p>Preencha o formulário de cadastro com seus dados e aguarde o contato para agendamento da entrevista.</p>
         
@@ -47,57 +48,57 @@
             <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">🐾 🐾 🐾 🐾 🐾🐾 🐾 🐾 🐾 🐾</text>
         </svg>
 
-            <form class="formulario-conteudo">            
-                <div class="container-flex" style="align-items: center; gap: 10%; margin-bottom: 15px;">
-                    <img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy">
+            <form class="formulario-conteudo" aria-label="Formulário de cadastro">            
+                <div class="container-flex" role="region" aria-label="Cabeçalho do formulário" style="align-items: center; gap: 10%; margin-bottom: 15px;">
+                    <img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" aria-label="logo" width="32" height="32" loading="lazy">
                     <h3>Formulário de Cadastro</h3>
                 </div>
                 <!-- Dados Pessoais -->
                 <fieldset class="fieldset">
                     <legend><strong>Dados Pessoais</strong></legend>
-                    <label for="nome">Nome completo:</label><br>
-                    <input class="input-long" type="text" id="nome" name="nome" size="60" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Digite seu nome completo"><br><br>
+                    <label id="nome-label" for="nome">Nome completo:</label><br>
+                    <input class="input-long" type="text" id="nome" aria-labelledby="nome-label" name="nome" size="60" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Digite seu nome completo"><br><br>
                     <div id="nome-status"></div>
 
-                    <label for="cpf">CPF:</label><br>
-                    <input class="input-medium" type="text" id="cpf" name="cpf" size="11" maxlength="11" pattern="\d{11}" required placeholder="Somente números"><br><br>
+                    <label id="cpf-label" for="cpf">CPF:</label><br>
+                    <input class="input-medium" type="text" id="cpf" aria-labelledby="cpf-label" name="cpf" size="11" maxlength="11" pattern="\d{11}" required placeholder="Somente números"><br><br>
 
-                    <label for="nascimento">Data de Nascimento:</label><br>
-                    <input type="date" id="nascimento" name="nascimento" min="1900-01-01" max="2025-12-31" required><br>
+                    <label id="nascimento-label" for="nascimento">Data de Nascimento:</label><br>
+                    <input type="date" id="nascimento" aria-labelledby="nascimento-label" name="nascimento" min="1900-01-01" max="2025-12-31" required><br>
                 </fieldset>
 
                 <!-- Contato -->
                 <fieldset class="fieldset">
                     <legend><strong>Contato</strong></legend>
-                    <label for="telefone">Telefone:</label><br>
-                    <input class="input-medium" type="tel" id="telefone" name="telefone" pattern="\d{10}" maxlength="10" placeholder="Ex: 1191234567"><br><br>
+                    <label id="telefone-label" for="telefone">Telefone:</label><br>
+                    <input class="input-medium" type="tel" id="telefone" aria-labelledby="telefone-label" name="telefone" pattern="\d{10}" maxlength="10" placeholder="Ex: 1191234567"><br><br>
 
-                    <label for="celular">Celular:</label><br>
-                    <input class="input-medium" type="tel" id="celular" name="celular" pattern="\d{11}" maxlength="11" required placeholder="Ex: 11912345678"><br><br>
+                    <label id="celular-label" for="celular">Celular:</label><br>
+                    <input class="input-medium" type="tel" id="celular" aria-labelledby="celular-label" name="celular" pattern="\d{11}" maxlength="11" required placeholder="Ex: 11912345678"><br><br>
 
-                    <label for="email">E-mail:</label><br>
-                    <input class="input-long" type="email" id="email" name="email" size="60" required placeholder="exemplo@email.com"><br>
+                    <label id="email-label" for="email">E-mail:</label><br>
+                    <input class="input-long" type="email" id="email" aria-labelledby="email-label" name="email" size="60" required placeholder="exemplo@email.com"><br>
                 </fieldset>
 
                 <!-- Endereço -->
                 <fieldset class="fieldset">
                     <legend><strong>Local de Residência</strong></legend>
-                    <label for="endereco">Endereço:</label><br>
-                    <input class="input-long" type="text" id="endereco" name="endereco" size="60" required placeholder="Ex: Rua exemplo, nº 1234"><br><br>
+                    <label id="endereco-label" for="endereco">Endereço:</label><br>
+                    <input class="input-long" type="text" id="endereco" aria-labelledby="endereco-label" name="endereco" size="60" required placeholder="Ex: Rua exemplo, nº 1234"><br><br>
                     <div id="endereco-status"></div>
 
-                    <label for="complemento">Complemento (opcional):</label><br>
-                    <input class="input-long" type="text" id="complemento" name="complemento" size="60" placeholder="Ex: Bloco, apartamento, ao lado de..."><br><br>
+                    <label id="complemento-label" for="complemento">Complemento (opcional):</label><br>
+                    <input class="input-long" type="text" id="complemento" aria-labelledby="complemento-label" name="complemento" size="60" placeholder="Ex: Bloco, apartamento, ao lado de..."><br><br>
 
-                    <label for="cep">CEP:</label><br>
-                    <input class="input-medium" type="text" id="cep" name="cep" pattern="\d{8}" maxlength="8" required placeholder="Somente números"><br><br>
+                    <label id="cep-label" for="cep">CEP:</label><br>
+                    <input class="input-medium" type="text" id="cep" aria-labelledby="cep-label" name="cep" pattern="\d{8}" maxlength="8" required placeholder="Somente números"><br><br>
 
-                    <label for="cidade">Cidade:</label><br>
-                    <input class="input-medium" type="text" id="cidade" name="cidade" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Digite o nome de sua cidade"><br><br>
+                    <label id="cidade-label" for="cidade">Cidade:</label><br>
+                    <input class="input-medium" type="text" id="cidade" aria-labelledby="cidade-label" name="cidade" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Digite o nome de sua cidade"><br><br>
                     <div id="cidade-status"></div>
 
-                    <label for="uf">UF:</label><br>
-                    <select id="uf" name="uf" required>
+                    <label id="uf-label" for="uf">UF:</label><br>
+                    <select id="uf" aria-labelledby="uf-label" name="uf" required>
                         <option value="">Selecione</option>
                         <option value="AC">AC</option><option value="AL">AL</option><option value="AM">AM</option>
                         <option value="AP">AP</option><option value="BA">BA</option><option value="CE">CE</option>
@@ -112,8 +113,8 @@
                 </fieldset>
 
                 <div style="margin-top: 20px;">
-                    <button class="botao btn-cor1" type="submit" value="Enviar" aria-label="Botão de Envio" aria-live="polite" style="border: none; color:white">Enviar</button>
-                    <button class="botao btn-cor4" type="reset" value="Limpar" aria-label="Botão de limpar campos" style="border: none; color:white">Limpar</button>
+                    <button class="botao btn-cor1" type="submit" value="Enviar" aria-label="Botão de Envio" aria-live="polite" style="border: none;">Enviar</button>
+                    <button class="botao btn-cor4" type="reset" value="Limpar" aria-label="Botão de limpar campos" style="border: none;">Limpar</button>
                     <div id="confirmacao"></div>
                 </div>
             </form>

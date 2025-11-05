@@ -3,7 +3,7 @@
     --cor-azul-primario: #005fa3;
     --cor-verde-sucesso: #3ce775;
     --cor-vermelho-alerta: #e74c3c;
-    --Amarelo-destaque: #ffd700;
+    --Amarelo-destaque: #ffd740;
 
         /* neutras */
     --cor-neutra0:  #000000ff;
@@ -22,8 +22,9 @@
         /* tema claro*/
     --cor-primaria: #0077cc;
     --cor-secundaria: #28a745;
-    --cor-destaque-primario: #FFD700;
+    --cor-destaque-primario: #ffd740;
     --cor-destaque-secundario: hsl(180, 100%, 40%);
+    --cor-terciaria: var(--cor-neutra3);
     --cor-fundo-nv0: var(--cor-neutra10);
     --cor-fundo-nv1: var(--cor-neutra8);
     --cor-fundo-nv2:  var(--cor-neutra7);
@@ -33,6 +34,8 @@
     --cor-borda: var(--cor-neutra8);
     --cor-borda2: var(--cor-neutra4);
     --cor-botao: #0077cc;
+    --cor-texto-botao-primaria: var(--cor-neutra0);
+    --cor-texto-botao-secundaria: var(--cor-neutra10);
         
       /* espaçamento */
     --espacamento1: 8px;
@@ -187,15 +190,16 @@ body {
 
   #menu-itens {
     display: flex;
-    font-size: var(--tamanho-fonte-p);  
+    font-size: var(--tamanho-fonte-p);
     height: 50%;
     margin: 0;
   }
 
   #menu-itens > li {
     align-content: center;
-    padding: 10px;
     transition: all 0.3s ease;
+    align-self: center;
+    justify-self: center;
   }
   
   #menu-itens > li:hover .menu-sub-itens {
@@ -203,12 +207,24 @@ body {
     display: block;
   }
 
+  #menu-itens > li > a {
+    height: 50px;
+  }
+
   #menu-toggle {
     display: none;
   }
 
   .texto {
-    display: flex;
+    display: block;
+    padding: 7.20px;
+    align-self: center;
+    transition: all 0.3s;
+    font-size: var(--tamanho-fonte-h3);
+  }
+
+  .texto:hover {
+    transform: translatex(-2px)   
   }
 
   .icone {
@@ -227,27 +243,27 @@ body {
 
   .menu-sub-itens:hover > .sub-itens {
     display: block;
-    margin-top: 10px;
-    margin-left: -45px;
   }
 
   .sub-itens {
     list-style: none;
     position: absolute;
-    padding: 0;
-    margin: 0;
+    top: 1;
   }
 
   .sub-itens > li {
-    border: 1px solid var(--cor-fundo-nv3);
-    padding: 15px 25px;
-    font-size: var(--tamanho-fonte-h5);
-    align-content: center;
     background-color: var(--cor-fundo-nv2);
+    border: 1px solid var(--cor-fundo-nv3);
+    padding: 15px 0;
+    align-content: center;
     transition: all 0.3s ease;
   }
 
-  .sub-itens > li:hover { 
+  .sub-itens a {    
+    padding: 15px;
+  }
+
+  .sub-itens li:hover { 
     background-color: var(--cor-fundo-nv1);
   }
 }
@@ -357,6 +373,10 @@ body {
     background-color: var(--cor-destaque-secundario);
 }
 
+.botao:focus {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
 .botao:active {
   transform: scale(0.9);
 }
@@ -364,27 +384,27 @@ body {
 /* Personalizar cor de botão */
 .btn-cor0 {
   background-color: var(--cor-primaria); 
-  color: var(--cor-texto-secundario);
+  color: var(--cor-texto-botao-secundaria);
 }
 
 .btn-cor1 {
   background-color: var(--cor-secundaria); 
-  color:  var(--cor-texto-secundario); 
+  color:  var(--cor-texto-botao-secundaria); 
 }
 
 .btn-cor2 {
   background-color: var(--cor-destaque-primario); 
-  color:  var(--cor-texto-primario);
+  color:  var(--cor-texto-botao-primaria);
 }
 
 .btn-cor3 {
   background-color: var(--cor-azul-primario);  
-  color:  var(--cor-neutra10); 
+  color: var(--cor-texto-botao-secundaria); 
 }
 
 .btn-cor4 {
-  background-color: var(--cor-neutra3); 
-  color:  var(--cor-texto-secundario);
+  background-color: var(--cor-terciaria); 
+  color: var(--cor-texto-botao-secundaria);
 }
 
 .separador-svg {  
@@ -435,8 +455,8 @@ iframe, #mensagem {
 /* Layout e estilo do formulário*/
 
 form {
-  background-color: white;
-  color: black;
+  background-color: var(--fundo-primario); 
+  color: var(--cor-texto-primario);
 }
 
 .formulario-conteudo {
@@ -454,9 +474,14 @@ form {
 
 input, select { 
   padding: 0.5rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--cor-borda2);
   transition: all 0.3s ease;
   outline: none;
+}
+
+input, select, textarea {
+  background-color: var(--fundo-primario); 
+  color: var(--cor-texto-primario)
 }
 
 .input-long {
@@ -573,8 +598,9 @@ input:focus {
 [data-tema="escuro"] {  
   --cor-primaria: #5fb2f6;
   --cor-secundaria: #66bb6a;
-  --cor-destaque-primario: hsl(180, 100%, 40%);
-  --cor-destaque-secundario: #FFD700;
+  --cor-destaque-primario: #bf7000;
+  --cor-destaque-secundario: hsl(180, 100%, 40%);
+  --cor-tercaria: var(#5fb2f6);
   --cor-fundo-nv0: var(--cor-neutra1);
   --cor-fundo-nv1: var(--cor-neutra2);
   --cor-fundo-nv2:  var(--cor-neutra3);
@@ -584,21 +610,27 @@ input:focus {
   --cor-borda: var(--cor-neutra3);
   --cor-borda2: gold;
   --cor-botao: #90caf9;
+  --cor-texto-botao-primaria: var(--cor-neutra10);
+  --cor-texto-botao-secundaria: var(--cor-neutra10);
 }
 
 /* Alto contraste */
 [data-tema="alto-contraste"] {
   --cor-primaria: #00ffff;
-  --cor-secundaria: #ffff00; 
-  --cor-destaque-primario: #FFD700;
-  --cor-destaque-secundario: #00ffff;
+  --cor-secundaria: #00ffff; 
+  --cor-destaque-primario: #00ffff;
+  --cor-azul-primario: #00ffff;
+  --cor-terciaria: #00ffff;
+  --cor-destaque-secundario: #bf7000;
   --cor-fundo-nv0: var(--cor-neutra1);
   --cor-fundo-nv1: var(--cor-neutra2);
   --cor-fundo-nv2:  var(--cor-neutra3);
   --cor-fundo-nv3: var(--cor-neutra4);
-  --cor-texto-primario: var(--cor-neutra10);
-  --cor-texto-secundario: var(--cor-neutra0);
- --cor-borda: var(--cor-neutra3);
+  --cor-texto-primario: #ffd400;
+  --cor-texto-secundario: #ffd400;
+  --cor-borda: var(--cor-neutra3);
   --cor-borda2: gold;
   --cor-botao: #90caf9;
+  --cor-texto-botao-primaria: #ffd400;
+  --cor-texto-botao-secundaria: #ffd400;
 }

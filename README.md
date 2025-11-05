@@ -1,53 +1,57 @@
-# Animal Shelter Website Project v3.0
+# Animal Shelter - Plataforma Web
 
-## nome do repositório: projeto-front-end
-Aplicação prática de conceitos fundamentais de desenvolvimentos em um contexto realista e socialmente relevante.
+Aplicação prática de desenvolvimento front-end em um contexto socialmente relevante: uma ONG fictícia de acolhimento e adoção de animais.
 
-## Descrição
-Projeto de desenvolvimento de uma plataforma web, que simula uma ONG fictícia de abrigo para animais.
+## 📌 Visão Geral
 
-## Contexto 
-Muitas Organizações Não Governamentais (ONGs) enfrentam limitações orçamentárias e técnicas que impedem o desenvolvimento de plataformas digitais profissionais, essenciais para ampliar seu alcance, captar recursos e engajar voluntários.
+Este projeto simula uma plataforma digital para uma organização não governamental dedicada à proteção animal. O objetivo é oferecer uma experiência acessível, responsiva e funcional para usuários que desejam adotar, contribuir ou se voluntariar.
 
-## Objetivo Geral
-Desenvolver uma plataforma web completa e profissional que permita a ONGs gerenciar suas atividades, divulgar projetos, captar recursos e engajar voluntários, aplicando, de forma integrada, todos os conceitos teóricos estudados.
+## 🚀 Funcionalidades
 
-## Tecnologias Utilizadas
-- HTML5;
-- CSS3;
-- JavaScript;
-- GIT;
-- VS Code;
+- Página inicial com apresentação institucional
+- Seções de serviços: adoção, doação, voluntariado
+- Página de cadastro com validação visual
+- Página de contato com mapa e formulário
+- Página de apoio com instruções de doação
+- Painel de acessibilidade:
+  - Alternância de tema (claro/escuro)
+  - Modo alto contraste
+  - Controle de tamanho de fonte
+- Layout responsivo com menu adaptável
+- Separadores decorativos com pegadas
+- Animações suaves e temáticas
 
-## Instalação e Execução(pendente)
-- Baixar e instalar VS Code;
-- Instalar extensão Live Server no VS Code;
-- Baixar repositório 'projeto-front-end' no GitHub ou pelo link: <a href="https://github.com/vbsilva-cs/projeto-front-end/archive/refs/heads/main.zip">Download .Zip</a>
-  
-## Estrutura do Projeto
-Explicação da organização de pastas:
+## 🧱 Tecnologias Utilizadas
 
-- #### Repositóro principal(root): "projeto-front-end"<br>
-  -> contem todos os arquivos da plataforma
-  - #### diretório: "public"<br>
-      -> o index.html pode ser encontrado na pasta "public"
-  - #### diretório: "components"<br>
-      -> os demais componentes se encontram na pasta "components"
-      - #### subpasta: assets<br>
-        -> encontram-se as imagens, logotipos e ícones
-      - #### subpasta: pages<br>
-        -> arquivos html das páginas implementadas
-         
-## Deploy
-<ol>
-  <li>configurar VS Code com extensão Live Server;</li>
-  <li> fazer o download do repositório na versão preferida;</li>
-  <li> abrir o repositório no VS Code;</li>
-  <li> abrir o arquivo 'index.html' através do live server.</li>
-</ol>
+- HTML5
+- CSS3 com variáveis customizadas
+- JavaScript (sem bibliotecas externas)
+- Git e GitHub
 
-## Contribuição(pendente)
-Guidelines para contribuições
+## ♿ Acessibilidade
 
-## Licença
-Creative Commons Zero v1.0 Universal
+- Navegação por teclado em todos os componentes
+- Contraste mínimo de 4.5:1 para textos
+- Estrutura semântica com uso de ARIA
+- Foco visível e feedback visual em formulários
+
+## 📁 Estrutura do Projeto
+
+- public/index.html: página inicial
+- components/pages/: páginas internas (apoio, cadastro, contato etc.)
+- components/assets/: imagens, ícones e logotipos
+- components/styles/global.css: folha de estilo principal
+- components/scripts/script.js: interações JS
+
+
+## 🛠️ Como Executar
+
+1. Clone o repositório:
+   `git clone https://github.com/vbsilva-cs/projeto-front-end.git`
+2. Abra o projeto no VS Code
+3. Instale a extensão Live Server
+4. Clique com o botão direito no `index.html` e selecione "Open with Live Server"
+
+## 📄 Licença
+
+Creative Commons Zero v1.0 Universal (CC0-1.0)
