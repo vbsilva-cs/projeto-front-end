@@ -1,3 +1,7 @@
+function emConstrucao () {
+  alert("Atenção: Em construção!\nLamentamos o incoveniente.");
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ATIVACAO DO MENU HAMBURGUER TOGGLE */
@@ -77,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
   } 
 
   /* Código para postagens de comentários na página contato.html */
-	//const form = document.querySelector('form');
 	const post = document.querySelector('#comentarios');
 	
     form.addEventListener('submit', (event) => {

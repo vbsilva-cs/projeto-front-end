@@ -115,6 +115,10 @@ body {
   background-color: #e5e5e5;  
 }
 
+#menu-toggle:active {
+  background-color: var(--cor-neutra10);  
+}
+
 .texto {
   display: flex;
 }
@@ -347,6 +351,10 @@ body {
     background-color: hsl(180, 100%, 40%);
 }
 
+.botao:active {
+  transform: scale(0.9);
+}
+
 /* Personalizar cor de botão */
 .btn-cor0 {
   background-color: #0077cc; 
@@ -491,6 +499,7 @@ input:focus {
   color: green;
 } /* Fim validação de formulário */
 
+/* Area para adição de novas postagens na página contato.html */
 #comentarios {
   background-color: var(--cor-fundo-nv0);
   display: flex;
@@ -512,3 +521,4 @@ input:focus {
 .separador-svg {  
   animation: efeito-surgir 2s ease-in-out;
 }
+
