@@ -28,6 +28,22 @@ function emConstrucao () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* Animação de Boas-vindas, é executada uma vez por sessão */
+  const jaViu = sessionStorage.getItem('animacao-vista');
+  const animacao = document.getElementById('animacao-inicial');
+
+  if (!jaViu && animacao) {
+    sessionStorage.setItem('animacao-vista', 'true');
+
+    setTimeout(() => {
+      animacao.style.opacity = '0';
+      animacao.style.pointerEvents = 'none';
+    }, 6000); // tempo total da animação
+  } else if (animacao) {
+    animacao.remove();
+  }
+
+
   /* ATIVACAO DO MENU HAMBURGUER TOGGLE */
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu-itens');
@@ -121,11 +137,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             post.innerHTML += `<div class="container-flex" style="flex-direction:row; gap: 30px; margin-bottom: 15px;"><img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy"><p>${mensagem}</p></div>`;
             alert('Postagem realizada com sucesso!');
-            form.reset
+            document.querySelector('#mensagem').value = '';
             return;
         }
 	});
 
+  /* Aviso de Inscrição sobre a sucessão da inscrição na página notícias.html */
   document.querySelector('#inscricao').addEventListener('submit', function (e) {
     e.preventDefault();
     if (this.checkValidity()) {

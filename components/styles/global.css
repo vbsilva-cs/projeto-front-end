@@ -217,7 +217,7 @@ body {
 
   .texto {
     display: block;
-    padding: 7.20px;
+    padding: 10px;
     align-self: center;
     transition: all 0.3s;
     font-size: var(--tamanho-fonte-h3);
@@ -249,6 +249,7 @@ body {
     list-style: none;
     position: absolute;
     top: 1;
+    margin-left: -62px;
   }
 
   .sub-itens > li {
@@ -545,22 +546,6 @@ input:focus {
   margin-bottom: 15px;
 }
 
-
-@keyframes efeito-surgir {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.section {
-  animation: efeito-surgir 0.8s ease-in-out;
-}
-
-.separador-svg {  
-  animation: efeito-surgir 2s ease-in-out;
-}
-
-
-
 /* Painel de Acessibilidade */
 #painel-acessibilidade {
   position: fixed;
@@ -579,6 +564,90 @@ input:focus {
     right: 14%;
   }
 }
+
+  /* Animação de primeira visita */
+#animacao-inicial {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fundo-escuro {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  animation: escurecer 1s ease forwards;
+}
+
+.bola-la {
+  position: absolute;
+  bottom: 20%;
+  left: -100px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  animation: rolar 3s ease-in-out forwards;
+}
+
+.gato {
+  position: absolute;
+  bottom: 20%;
+  left: -200px;
+  width: 60px;
+  height: 40px;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation: perseguir 3s ease-in-out 1s forwards;
+}
+
+.gato-carregando-bola {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: saltar 1s ease-in-out 4s forwards;
+}
+
+@keyframes escurecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rolar {
+  0% { left: -100px; }
+  100% { left: 60%; }
+}
+
+@keyframes perseguir {
+  0% { left: -200px; }
+  100% { left: 55%; }
+}
+
+@keyframes saltar {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-100px) scale(1.2); }
+  100% { transform: translateY(0) scale(1); opacity: 0; }
+} /* Fim animação*/
+
+/* Efeitos de surgimento das seções */
+@keyframes efeito-surgir {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: efeito-surgir 0.8s ease-in-out;
+}
+
+.separador-svg {  
+  animation: efeito-surgir 2s ease-in-out;
+}
+
 
 #painel-acessibilidade button {
   background-color: var(--cor-primaria);
