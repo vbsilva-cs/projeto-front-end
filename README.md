@@ -1,4 +1,7 @@
-# Animal Shelter Website
+# Animal Shelter Website Project v3.0
+
+## nome do repositório: projeto-front-end
+Aplicação prática de conceitos fundamentais de desenvolvimentos em um contexto realista e socialmente relevante.
 
 ## Descrição
 Projeto de desenvolvimento de uma plataforma web, que simula uma ONG fictícia de abrigo para animais.
