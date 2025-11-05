@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   } 
 
-  /* Código para realizaçõa de postagens na página contato.html */
+  /* Código para postagens de comentários na página contato.html */
 	//const form = document.querySelector('form');
 	const post = document.querySelector('#comentarios');
 	
@@ -98,4 +98,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 	});
+
+  document.querySelector('#inscricao').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (this.checkValidity()) {
+      alert('Inscrição efetuada! Verifique seu e-mail para confirmação da sua inscrição!');
+      this.reset();
+    } else {
+      alert('Por favor, preencha todos os campos corretamente.');
+    }
+  });
+
 });

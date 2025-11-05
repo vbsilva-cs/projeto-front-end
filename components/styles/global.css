@@ -328,16 +328,6 @@ body {
   transform: scale(1.02);
 }
 
-
-.botao {
-  display: inline-block; 
-  padding: 8px 16px; 
-  background-color: var(--cor-neutra4); 
-  color: var(--cor-neutra10); 
-  text-decoration: none; 
-  border-radius: 5px;
-}
-
 /* Botões */
 .botao {
   display: inline-block; 
