@@ -1,3 +1,27 @@
+/* Painel de acessibilidade */
+function alternarTema() {
+  const html = document.documentElement;
+  const temaAtual = html.getAttribute("data-tema");
+  html.setAttribute("data-tema", temaAtual === "escuro" ? "claro" : "escuro");
+}
+
+function alternarContraste() {
+  const html = document.documentElement;
+  const temaAtual = html.getAttribute("data-tema");
+  html.setAttribute("data-tema", temaAtual === "alto-contraste" ? "claro" : "alto-contraste");
+}
+
+function aumentarFonte() {
+  const atual = parseFloat(getComputedStyle(document.body).fontSize);
+  document.body.style.fontSize = (atual + 2) + "px";
+}
+
+function reduzirFonte() {
+  const atual = parseFloat(getComputedStyle(document.body).fontSize);
+  document.body.style.fontSize = (atual - 2) + "px";
+}
+
+/* função de alerta para conteúdo indisponível */
 function emConstrucao () {
   alert("Atenção: Em construção!\nLamentamos o incoveniente.");
 }
