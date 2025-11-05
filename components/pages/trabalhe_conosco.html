@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html  lang="pt-BR" data-tema="claro">
 <head>
     <title>Trabalhe Conosco - Animal Shelter</title>
     <meta charset="UTF-8">
@@ -9,7 +9,13 @@
 
 <body class="layout-principal">
     <!-- Cabeçalho -->
-    <header class="header">
+    <header class="header">        
+        <div id="painel-acessibilidade" aria-label="Painel de acessibilidade" role="region">
+            <button onclick="alternarTema()" aria-label="Alternar entre modo claro e escuro">🌙 Tema</button>
+            <button onclick="alternarContraste()" aria-label="Ativar alto contraste">🌓 Contraste</button>
+            <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="reduzirFonte()" aria-label="Reduzir fonte">A-</button>
+        </div>
         <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
             <a href="../../public/index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
             <button id="menu-toggle" aria-label="Abrir menu">☰</button>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html  lang="pt-BR" data-tema="claro">
 <head>
     <title>Contato - Animal Shelter</title>
     <meta charset="UTF-8">
@@ -9,7 +9,13 @@
 
 <body class="layout-principal">
     <!-- Cabeçalho -->
-    <header class="header">
+    <header class="header">        
+        <div id="painel-acessibilidade" aria-label="Painel de acessibilidade" role="region">
+            <button onclick="alternarTema()" aria-label="Alternar entre modo claro e escuro">🌙 Tema</button>
+            <button onclick="alternarContraste()" aria-label="Ativar alto contraste">🌓 Contraste</button>
+            <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="reduzirFonte()" aria-label="Reduzir fonte">A-</button>
+        </div>
         <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
             <a href="../../index.html"><img src="../assets/logo/logo-animal-shelter-200.png" alt="Logotipo Animal Shelter" width="200" loading="lazy"></a>
             <button id="menu-toggle" aria-label="Abrir menu">☰</button>
@@ -59,9 +65,9 @@
             <article class="cartao" style="margin-top: 20px; width: 100%;">
                 <h2>Sugestões e Críticas</h2>
                 <p>Envie sua opinião, sugestão ou crítica. Sua participação é muito importante para nós!</p>
-                <form class="article" style="width: 100%;">
-                    <label for="mensagem">Comentário</label>
-                    <textarea id= "mensagem" name="mensagem" rows="10" cols="70" placeholder="Escreva sua mensagem aqui..." style="max-width: 95%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                <form class="article" style="width: 100%; background-color: var(--fundo-primario);">
+                    <label for="mensagem" style="color: var(--cor-texto-primario);">Comentário</label>
+                    <textarea id= "mensagem" name="mensagem" rows="10" cols="70" placeholder="Escreva sua mensagem aqui..." style="max-width: 95%; padding: 10px; background-color: var(--fundo-primario); color: var(--cor-texto-primario); border-radius: 5px; border: 1px solid #ccc;"></textarea>
                     <input class="botao btn-cor1" type="submit" value="Enviar" style="border: none;">
                 </form>
             </article>

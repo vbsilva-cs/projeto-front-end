@@ -1,3 +1,31 @@
+/* Painel de acessibilidade */
+function alternarTema() {
+  const html = document.documentElement;
+  const temaAtual = html.getAttribute("data-tema");
+  html.setAttribute("data-tema", temaAtual === "escuro" ? "claro" : "escuro");
+}
+
+function alternarContraste() {
+  const html = document.documentElement;
+  const temaAtual = html.getAttribute("data-tema");
+  html.setAttribute("data-tema", temaAtual === "alto-contraste" ? "claro" : "alto-contraste");
+}
+
+function aumentarFonte() {
+  const atual = parseFloat(getComputedStyle(document.body).fontSize);
+  document.body.style.fontSize = (atual + 2) + "px";
+}
+
+function reduzirFonte() {
+  const atual = parseFloat(getComputedStyle(document.body).fontSize);
+  document.body.style.fontSize = (atual - 2) + "px";
+}
+
+/* função de alerta para conteúdo indisponível */
+function emConstrucao () {
+  alert("Atenção: Em construção!\nLamentamos o incoveniente.");
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ATIVACAO DO MENU HAMBURGUER TOGGLE */
@@ -77,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
   } 
 
   /* Código para postagens de comentários na página contato.html */
-	//const form = document.querySelector('form');
 	const post = document.querySelector('#comentarios');
 	
     form.addEventListener('submit', (event) => {
@@ -92,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (post.innerHTML.trim() == '<p>Nenhum comentário.</p>') {
                 post.innerHTML = '';
             }
-            post.innerHTML += '<div class="container-flex" style="flex-direction:row; gap: 30px; margin-bottom: 15px;"><img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy"><p>' + mensagem + '</p></div>';
+            post.innerHTML += `<div class="container-flex" style="flex-direction:row; gap: 30px; margin-bottom: 15px;"><img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy"><p>${mensagem}</p></div>`;
             alert('Postagem realizada com sucesso!');
             form.reset
             return;
