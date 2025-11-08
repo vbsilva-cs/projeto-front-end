@@ -1,3 +1,20 @@
+// Verificar consentimento existente
+function showCookieBanner() {
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.innerHTML = `
+    <p>Utilizamos cookies para melhorar sua experiência.</p>
+    <button onclick="acceptCookies()">Aceitar</button>
+    <a href="/privacy">Política de Privacidade</a>
+  `;
+  document.body.appendChild(banner); // aqui ^
+}
+
+function acceptCookies() {
+  localStorage.setItem('cookie-consent', 'accepted');
+  document.querySelector('.cookie-banner').remove();
+}
+
 /* Painel de acessibilidade */
 function alternarTema() {
   const html = document.documentElement;
@@ -28,20 +45,42 @@ function emConstrucao () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  
+  if (!localStorage.getItem('cookie-consent')) { // aqui
+    showCookieBanner();
+  }
+
+
   /* Animação de Boas-vindas, é executada uma vez por sessão */
   const jaViu = sessionStorage.getItem('animacao-vista');
   const animacao = document.getElementById('animacao-inicial');
-
+  const somFundo = document.getElementById('som-fundo');
+  
   if (!jaViu && animacao) {
     sessionStorage.setItem('animacao-vista', 'true');
 
     setTimeout(() => {
+      somFundo.play();
       animacao.style.opacity = '0';
       animacao.style.pointerEvents = 'none';
     }, 6000); // tempo total da animação
   } else if (animacao) {
     animacao.remove();
-  }
+  } /* fim animação*/
+
+  /* Audio Sincronizado com a animação */  
+  const somBola = document.getElementById('som-bola');
+  const somGato = document.getElementById('som-gato');
+  const somSalto = document.getElementById('som-salto');
+
+  if (!sessionStorage.getItem('animacao-vista')) {
+    sessionStorage.setItem('animacao-vista', 'true');
+
+    setTimeout(() => somBola.play(), 1000);
+    setTimeout(() => somGato.play(), 2000);
+    setTimeout(() => somSalto.play(), 4000);
+  } /* fim audio da animação*/
+
 
 
   /* ATIVACAO DO MENU HAMBURGUER TOGGLE */
@@ -127,15 +166,16 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();	
 
         const mensagem = document.querySelector('#mensagem').value.trim();
-        let x = 0;
 
         if (mensagem == '') {
             alert('Preencha o campo antes de enviar uma mensagem.');
         } else {
             if (post.innerHTML.trim() == '<p>Nenhum comentário.</p>') {
-                post.innerHTML = '';
-            }
+                post.innerHTML = '';                
+            };
+
             post.innerHTML += `<div class="container-flex" style="flex-direction:row; gap: 30px; margin-bottom: 15px;"><img src="../assets/icons/favicon-animal-shelter-48.png" alt="Logotipo Animal Shelter" width="32" height="32" loading="lazy"><p>${mensagem}</p></div>`;
+            
             alert('Postagem realizada com sucesso!');
             document.querySelector('#mensagem').value = '';
             return;
